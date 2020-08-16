@@ -1,14 +1,11 @@
 ---
-title: "Peer-graded Assignment: Course Project 1"
+title: "Reproducible Research: Peer Assessment 1"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-
-# Reproducible Research: Peer Assessment 1
 
 
 # Introduction
@@ -34,7 +31,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #load libraries
 #install.packages('rmarkdown')
 
-```{r}
+```{r gapminder, echo=FALSE}
 
 echo = TRUE
 library(knitr)
@@ -60,7 +57,10 @@ echo = TRUE
 su <- tapply(activity$steps, activity$date, sum, na.rm=T)
 
 echo = TRUE
+
+
 hist(su, xlab = "sum of steps per day", main = "histogram of steps per day")
+
 
 
 echo = TRUE
